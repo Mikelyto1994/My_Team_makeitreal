@@ -148,6 +148,7 @@ h3 {
     margin-top: 20px; /* Ajusta el margen superior */
     left: 0; /* Restablece la posición horizontal */
     gap: 0; /* Elimina el espacio entre tittle y subtittle */
+    box-sizing: border-box;
   }
 
   /* Ajusta los encabezados dentro de .tittle para que se apilen verticalmente */
@@ -157,6 +158,7 @@ h3 {
     padding-left: 20px; /* Espaciado interno */
     margin: 0; /* Elimina el margen por defecto */
     text-align: start; /* Centra el texto para una mejor presentación en pantallas pequeñas */
+    box-sizing: border-box;
   }
 
   /* Estilo para el contenedor .content */

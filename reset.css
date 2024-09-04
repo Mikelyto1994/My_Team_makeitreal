@@ -1,0 +1,151 @@
+/* Estilos generales para el cuerpo */
+body {
+  font-family: "Poppins", Arial, sans-serif; /* Fuente por defecto */
+  font-weight: 500; /* Peso de la fuente */
+  color: #000000; /* Color de texto negro */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para la clase tittle */
+.tittle {
+  display: flex; /* Disposición en fila */
+  width: 60%; /* Ocupa el ancho completo */
+  position: relative;
+  margin-top: 40px;
+  gap: 8em;
+  left: 20%;
+}
+
+/* Ajustes para los encabezados dentro de .tittle */
+.tittle h1 {
+  font-size: 18px; /* Tamaño de fuente para h1 */
+  width: 50%; /* Cada uno ocupa el 50% del ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Elimina el margen por defecto */
+  font-weight: bold;
+}
+
+.tittle .subtittle {
+  font-size: 14px; /* Tamaño de fuente para subtitulo */
+  width: 50%; /* Cada uno ocupa el 50% del ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilo para los encabezados h1 y h2 en todo el documento */
+h1,
+h2 {
+  margin: 0; /* Elimina márgenes predeterminados */
+  font-weight: bold; /* Ajusta el peso de la fuente para los encabezados */
+}
+
+/* Tamaños de fuente específicos */
+h1 {
+  font-size: 18px; /* Tamaño de fuente para h1 */
+}
+
+h2 {
+  font-size: 14px; /* Tamaño de fuente para h2 */
+}
+
+h3 {
+  font-size: 14px; /* Tamaño de fuente para h3 */
+}
+/* Estilo para la clase content */
+.content {
+  width: 100%; /* Ocupa el ancho completo */
+}
+
+/* Estilo para los elementos dentro de teams_up y teams_down */
+.teams_up,
+.teams_down {
+  display: flex; /* Disposición en fila */
+  justify-content: space-between; /* Espaciado proporcional entre los elementos */
+  gap: 30px; /* Espacio entre los elementos */
+  margin: 20px 200px; /* Espaciado superior e inferior, y márgenes laterales de 200px */
+  padding-bottom: 50px;
+  margin-left: 270px;
+}
+
+/* Estilo para los elementos dentro de teams_up y teams_down */
+.teams_up > div,
+.teams_down > div {
+  display: grid; /* Disposición en cuadrícula */
+  grid-template-areas:
+    "image title"
+    "text text"; /* Define las áreas de la cuadrícula */
+  grid-template-columns: 60% 20%; /* Ancho de las columnas */
+  grid-template-rows: auto auto; /* Altura de las filas */
+  width: 300px; /* Ancho fijo para el contenedor */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  text-align: center; /* Alinea el texto al centro en general */
+  overflow: hidden; /* Evita que los elementos se desborden */
+  position: relative; /* Necesario para usar top */
+}
+
+/* Estilo para el segundo contenedor en cada fila */
+.teams_up > div:nth-child(2),
+.teams_down > div:nth-child(2) {
+  top: 40px; /* Mueve el segundo contenedor hacia abajo 40 px */
+}
+
+/* Estilo para las imágenes */
+.teams_up img,
+.teams_down img {
+  grid-area: image; /* Asigna la imagen a la área definida en la cuadrícula */
+  width: 100%; /* Ancho de la imagen ajustado al contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta la imagen para que se ajuste al contenedor */
+}
+
+/* Estilo para el título (h3) */
+.teams_up h3,
+.teams_down h3 {
+  grid-area: title; /* Asigna el título a la área definida en la cuadrícula */
+  writing-mode: vertical-rl; /* Rotación del texto 90 grados */
+  text-align: right; /* Alinea el texto a la derecha */
+  font-size: 14px; /* Tamaño de fuente para h3 */
+  font-weight: normal;
+  margin: 0; /* Elimina el margen por defecto */
+  width: 20px; /* Ancho fijo para el título */
+  height: auto; /* Altura automática según el contenido */
+  overflow: hidden; /* Evita el desbordamiento del texto */
+  align-self: start; /* Alinea el título al inicio del contenedor (parte superior) */
+}
+
+/* Estilo para el texto debajo de la imagen */
+.teams_up p,
+.teams_down p {
+  grid-area: text; /* Asigna el texto a la área definida en la cuadrícula */
+  font-size: 18px; /* Tamaño de fuente para párrafos */
+  font-weight: bold;
+  margin: 0; /* Elimina el margen por defecto */
+  margin-top: 10px;
+  text-align: left; /* Alinea el texto a la izquierda */
+  align-self: start; /* Alinea el texto en la parte superior de la celda */
+}
+
+/* Estilo para el párrafo en content */
+.content p {
+  font-size: 18px; /* Tamaño de fuente para párrafos en content */
+}
+
+/* Estilo para la clase attribution */
+.attribution {
+  text-align: center; /* Centra el texto */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  margin-top: 120px;
+}
+
+/* Estilo para los enlaces en la clase attribution */
+.attribution a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.attribution a:hover {
+  text-decoration: underline; /* Subrayado en hover */
+}

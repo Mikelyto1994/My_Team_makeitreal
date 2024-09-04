@@ -1,0 +1,224 @@
+/* Estilo para las imágenes dentro de .content */
+.content img {
+  grid-area: image; /* Asigna la imagen a la área definida en la cuadrícula */
+  width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  object-fit: cover; /* Ajusta la imagen para que se ajuste al contenedor sin distorsionar */
+  max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+  max-height: 100%; /* Limita la altura máxima al 100% del contenedor */
+  display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+/* Estilo para los títulos (h3) */
+.content h3 {
+  grid-area: title; /* Asigna el título a la área definida en la cuadrícula */
+  writing-mode: vertical-rl; /* Rotación del texto 90 grados */
+  text-align: right; /* Alinea el texto a la derecha */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0px; /* Espaciado interno */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  align-self: start; /* Alinea el título al inicio del contenedor (parte superior) */
+  display: flex; /* Utiliza flexbox para alinear el texto */
+  align-items: center; /* Alinea el texto verticalmente en el centro */
+}
+
+/* Estilo para el texto debajo de las imágenes */
+.content p {
+  grid-area: text; /* Asigna el texto a la área definida en la cuadrícula */
+  font-size: 18px; /* Tamaño de fuente para párrafos */
+  margin: 0; /* Elimina el margen por defecto */
+  margin-top: 10px;
+  text-align: left; /* Alinea el texto a la izquierda */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos generales para el cuerpo */
+body {
+  font-family: "Poppins", Arial, sans-serif; /* Fuente por defecto */
+  font-weight: 500; /* Peso de la fuente */
+  color: #000000; /* Color de texto negro */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para la clase tittle */
+.tittle {
+  display: flex; /* Disposición en fila */
+  width: 60%; /* Ocupa el ancho completo */
+  position: relative;
+  margin-top: 40px;
+  gap: 8em;
+  left: 20%;
+}
+
+/* Ajustes para los encabezados dentro de .tittle */
+.tittle h1 {
+  font-size: 18px; /* Tamaño de fuente para h1 */
+  width: 50%; /* Cada uno ocupa el 50% del ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Elimina el margen por defecto */
+  font-weight: bold;
+}
+
+.tittle .subtittle {
+  font-size: 14px; /* Tamaño de fuente para subtitulo */
+  width: 50%; /* Cada uno ocupa el 50% del ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilo para los encabezados h1 y h2 en todo el documento */
+h1,
+h2 {
+  margin: 0; /* Elimina márgenes predeterminados */
+  font-weight: bold; /* Ajusta el peso de la fuente para los encabezados */
+}
+
+/* Tamaños de fuente específicos */
+h1 {
+  font-size: 18px; /* Tamaño de fuente para h1 */
+}
+
+h2 {
+  font-size: 14px; /* Tamaño de fuente para h2 */
+}
+
+h3 {
+  font-size: 14px; /* Tamaño de fuente para h3 */
+}
+
+/* Estilo para la clase content */
+.content {
+  display: flex; /* Utiliza flexbox para el contenedor */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+  gap: 80px; /* Espacio entre los elementos */
+  width: 100%; /* Ocupa el ancho completo */
+  padding: 20px; /* Espacio interno */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilo para los elementos dentro de .content */
+.content > div {
+  position: relative;
+  left: 120px;
+  display: grid; /* Utiliza grid para el contenedor */
+  grid-template-areas:
+    "image title"
+    "text text"; /* Define que 'image' ocupa la primera posición, 'title' la segunda, y 'text' ocupa las dos filas restantes en la parte inferior */
+  grid-template-columns: 90% 5%; /* Ancho de las columnas */
+  grid-template-rows: 80% 5%; /* Altura de las filas */
+  gap: 10px; /* Espacio entre las áreas de la cuadrícula */
+  width: 300px; /* Cada elemento ocupa un tercio del contenedor, menos el espacio del gap */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  text-align: center; /* Centra el texto dentro de los elementos */
+  overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+.content .director,
+.content .developer {
+  margin-top: 80px; /* Mueve estos elementos hacia abajo 40px */
+}
+
+/* Estilo para la clase attribution */
+.attribution {
+  text-align: center; /* Centra el texto */
+  margin: 20px 0; /* Espaciado superior e inferior */
+  margin-top: 120px;
+}
+
+/* Estilo para los enlaces en la clase attribution */
+.attribution a {
+  color: #007bff; /* Color del enlace */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.attribution a:hover {
+  text-decoration: underline; /* Subrayado en hover */
+} /* Estilo general para pantallas de 375px o menos */
+
+/* Estilo general para pantallas de 375px o menos */
+@media (max-width: 375px) {
+  /* Estilo para la clase tittle */
+  .tittle {
+    display: block; /* Cambia de fila a bloque para que se apilen verticalmente */
+    width: 100%; /* Ancho completo del contenedor */
+    margin-top: 20px; /* Ajusta el margen superior */
+    left: 0; /* Restablece la posición horizontal */
+    gap: 0; /* Elimina el espacio entre tittle y subtittle */
+  }
+
+  /* Ajusta los encabezados dentro de .tittle para que se apilen verticalmente */
+  .tittle h1,
+  .tittle .subtittle {
+    width: 100%; /* Ancho completo del contenedor */
+    padding-left: 20px; /* Espaciado interno */
+    margin: 0; /* Elimina el margen por defecto */
+    text-align: start; /* Centra el texto para una mejor presentación en pantallas pequeñas */
+  }
+
+  /* Estilo para el contenedor .content */
+  .content {
+    display: grid; /* Cambia de flexbox a grid para mantener la distribución de áreas */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 90%; /* Ancho completo del contenedor */
+    padding: 0px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    margin: 0;
+  }
+
+  /* Estilo para los elementos dentro de .content */
+  .content > div {
+    position: relative;
+    left: 20px;
+    display: grid; /* Utiliza grid para el contenedor interno */
+    grid-template-areas:
+      "image title"
+      "text text"; /* Ajusta la distribución en dos columnas */
+    grid-template-columns: 1fr; /* Una sola columna para el contenido interno */
+    grid-template-rows: auto auto; /* Ajusta la altura de las filas automáticamente */
+    gap: 10px; /* Espacio entre las áreas de la cuadrícula */
+    width: 100%; /* Ancho completo del contenedor interno */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    text-align: center; /* Centra el texto dentro de los elementos */
+  }
+
+  /* Estilo para las imágenes dentro de .content */
+  .content img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 100%; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Ajusta la imagen para que se ajuste al contenedor sin distorsionar */
+  }
+
+  /* Ajusta los títulos dentro de .content */
+  .content h3 {
+    writing-mode: vertical-rl; /* Restaura la orientación horizontal para mejor presentación en pantallas pequeñas */
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 10px; /* Espaciado interno */
+  }
+
+  /* Estilo para el texto debajo de las imágenes */
+  .content p {
+    font-size: 16px; /* Ajusta el tamaño de la fuente para una mejor legibilidad en pantallas pequeñas */
+    margin-top: 5px; /* Ajusta el margen superior */
+    padding: 0;
+    align-self: start; /* Alinea el texto en el inicio del contenedor */
+  }
+
+  /* Estilo para los elementos con la clase director y developer */
+  .content .director,
+  .content .ux,
+  .content .developer2 {
+    margin-top: 80px; /* Restablece el margen superior para los elementos en pantallas pequeñas */
+  }
+
+  .content .owner,
+  .content .tech,
+  .content .developer {
+    margin: 0;
+  }
+}
